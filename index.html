@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background-color: #1a252f;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #c8d6e5;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #3498db;
+        }
+        .hero {
+            background: #ffffff;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 1rem;
+        }
+        .hero-text h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .hero-text h2 {
+            font-size: 1.3rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        .hero-text p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .profile-photo {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid #3498db;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h2.section-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            margin: 10px auto 0;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+        .skill-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-info {
+            padding: 1.5rem;
+        }
+        .project-info h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .project-info p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .project-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        footer {
+            background-color: #1a252f;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="hero">
+        <div class="hero-text">
+            <h1>Hi, I'm Danidex</h1>
+            <h2>Welcome to my digital space</h2>
+            <p>I specialize in building clean, functional, and responsive applications. Passionate about technology, efficiency, and solving complex problems with clean code.</p>
+        </div>
+        <div class="hero-image">
+            <img src="Dan.jpg" alt="Profile Photo Placeholder" class="profile-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="profile-photo" style="display: none;">[/home/mint/Downloads/Dan.jpg]</div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5 & CSS3</div>
+            <div class="skill-card">Data Logic</div>
+            <div class="skill-card">Data Analysis</div>
+            <div class="skill-card">Systems Management</div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Data Management System</h3>
+                    <p>An automated validation toolkit designed to optimize and reconcile data structures cleanly and efficiently.</p>
+                    <a href="#" class="project-link">View on GitHub →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>A lightweight, responsive single-page portfolio built using native web structures for peak performance.</p>
+                    <a href="#" class="project-link">View on GitHub →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Let's connect and build something great.</p>
+        <p>Email: <a href="mailto:adahdaniel2001@gmail.com">adahdaniel2001@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
